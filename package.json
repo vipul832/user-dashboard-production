@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --mode development",
     "build:prod": "tsc && vite build --outDir prodBuild --mode production",
-    "build:staging": "tsc && vite build --outDir stagBuild  --mode staging",
+    "build:staging": "tsc && vite build --outDir stageBuild  --mode staging",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
