@@ -5,6 +5,8 @@ import themeReducer from "../features/theme/themSlice";
 import UserCardReducer from "../features/users/UserCardSlice";
 import { userDataApi } from "../api/userApi";
 
+const Environment = import.meta.env;
+
 export const store = configureStore({
   reducer: {
     users: userReducer,
@@ -12,6 +14,7 @@ export const store = configureStore({
     userCard: UserCardReducer,
     [userDataApi.reducerPath]: userDataApi.reducer,
   },
+  devTools: Environment.VITE_APP_MODE === "development",
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(userDataApi.middleware),
 });

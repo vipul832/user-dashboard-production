@@ -24,6 +24,7 @@ function App() {
   const theme = useSelector(themeValue);
   const dispatch = useDispatch();
   let TotalPages = data?.totalPages ?? 0;
+
   return (
     <div
       className={`${
